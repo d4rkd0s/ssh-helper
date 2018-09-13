@@ -1,4 +1,4 @@
-#!/usr/bin/env python -tt
+#!/usr/bin/python3 -tt
 import json
 import os
 import curses
