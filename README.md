@@ -1,6 +1,12 @@
 # ssh-helper
 A python script that reads your ~/.ssh/config file and maintains a json file, to allow easy lookup/connections
 
+# Requirements
+
+- Linux or Mac OS (tested on linux)
+- Python3
+- A prepared `~/.ssh/config` file https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
+
 # Installation / Use
 
 1. `git clone https://github.com/d4rkd0s/ssh-helper`
