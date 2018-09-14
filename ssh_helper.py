@@ -8,23 +8,20 @@ __author__ = "Logan Schmidt (d4rkd0s)"
 __copyright__ = "Copyright 2018 d4rkd0s"
 __credits__ = ["Logan Schmidt"]
 __license__ = "MIT"
-__version__ = "1.0.1"
+__version__ = "1.0.0"
 __maintainer__ = "Logan Schmidt"
 __email__ = "d4rkd0s@gmail.com"
 __status__ = "Production"
 
-# Your username
-username = ""
-
 # Loads the database from connections.json file in ~/.ssh/
 def loadDB():
-    database_file = open("/home/" + username + "/.ssh/connections.json", "r")
+    database_file = open(os.environ['HOME'] + "/.ssh/connections.json", "r")
     return json.loads(database_file.read())
 
 def createNewDB():
-    database_file = open("/home/" + username + "/.ssh/connections.json", "w")
+    database_file = open(os.environ['HOME'] + "/.ssh/connections.json", "w")
     data = {}
-    config = open("/home/" + username + "/.ssh/config", "r")
+    config = open(os.environ['HOME'] + "/.ssh/config", "r")
     config_lines = config.readlines()
     num_of_lines = 0
     for line in config_lines:
@@ -36,7 +33,7 @@ def createNewDB():
     return loadDB()
 
 def prepareDB():
-    exists = os.path.isfile("/home/" + username + "/.ssh/connections.json")
+    exists = os.path.isfile(os.environ['HOME'] + "/.ssh/connections.json")
     if exists:
         return loadDB()
     else:
