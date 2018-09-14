@@ -8,7 +8,6 @@ __author__ = "Logan Schmidt (d4rkd0s)"
 __copyright__ = "Copyright 2018 d4rkd0s"
 __credits__ = ["Logan Schmidt"]
 __license__ = "MIT"
-__version__ = "1.0.0"
 __maintainer__ = "Logan Schmidt"
 __email__ = "d4rkd0s@gmail.com"
 __status__ = "Production"
