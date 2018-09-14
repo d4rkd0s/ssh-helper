@@ -1,11 +1,5 @@
-# SSH Helper
-A python script that reads your ~/.ssh/config file and maintains a json file, to allow easy lookup/connections
-
-# Requirements
-
-- Linux or Mac OS (tested on linux)
-- Python3
-- A prepared `~/.ssh/config` file https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
+# ssh-helper
+A python script that reads your ~/.ssh/config file and maintains a json file, to allow easy lookup/connections. There are more features being added, see the Planned Features section below.
 
 # Installation / Use
 
@@ -13,21 +7,9 @@ A python script that reads your ~/.ssh/config file and maintains a json file, to
 
 2. `cd ssh-helper`
 
-3. Edit the script and add your username
+3. Run it, first time, it will generate `~/.ssh/connections.json` used by the script as an intermediate layer (only file read permissions are needed for `~/.ssh/config` as it builds the `connections.json` for read/write.
 
-```
-# Your username
-username = ""
-```
-Change to whatever your `/home/yourname` is (Linux/Mac OS)
-```
-# Your username
-username = "yourname"
-```
-
-4. Run it, first time, it will generate `~/.ssh/connections.json` used by the script as an intermediate layer (only file read permissions are needed for `~/.ssh/config` as it builds the `connections.json` for read/write.
-
-5. A list of servers will display
+4. A list of servers will display
 
 ```
 [lschmidt@it586g .ssh]$ ssh_helper.py 
@@ -45,7 +27,7 @@ username = "yourname"
 Enter server #: 
 ```
 
-6. Pick one and connect, Whoosh!
+5. Pick one and connect, Whoosh!
 
 ```
 Enter server #: 1
@@ -64,4 +46,4 @@ Connection to 10.xx.xx.xx closed.
 - [X] Ability to choose and connect to a server
 - [ ] Ability to test connections all at once
 - [ ] Ability to update passwords on all servers (using Ansible underneath)
-- [ ] Ability to manage (add/modify/remove) servers to your `~/.ssh/config` file using `ssh_helper.py`
+- [ ] Ability to manage servers to your `~/.ssh/config` file using `ssh_helper.py`
