@@ -46,4 +46,4 @@ Connection to 10.xx.xx.xx closed.
 - [X] Ability to choose and connect to a server
 - [ ] Ability to test connections all at once
 - [ ] Ability to update passwords on all servers (using Ansible underneath)
-- [ ] Ability to manage servers to your `~/.ssh/config` file using `ssh_helper.py`
+- [ ] Ability to manage servers in your `~/.ssh/config` file using `ssh_helper.py`
